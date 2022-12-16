@@ -25,10 +25,10 @@ public class GameController {
         setTryCount();
         while(tryCount > 0){
             playRound();
-
-
+            OutputView.printRoundResult(cars);
             tryCount--;
         }
+        OutputView.printWinner(checkWinner());
     }
 
     private void setCars(){
@@ -51,6 +51,12 @@ public class GameController {
                 cars.get(i).go();
             }
         }
+    }
+
+    private List<String> checkWinner(){
+        List<String> winners = new ArrayList<>();
+
+        return winners;
     }
 
 }

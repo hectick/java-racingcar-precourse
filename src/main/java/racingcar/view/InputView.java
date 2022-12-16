@@ -2,7 +2,7 @@ package racingcar.view;
 import camp.nextstep.edu.missionutils.Console;
 
 public class InputView {
-    private static final String REGEX = "\\s*,\\s*";
+    public static final String SPLIT_REGEX = "\\s*,\\s*";
 
     public static String[] readCarNames(){
         String input = Console.readLine();
@@ -16,7 +16,7 @@ public class InputView {
     }
 
     private static String[] parse(String input){
-        return input.split(REGEX);
+        return input.split(SPLIT_REGEX);
     }
 
 
