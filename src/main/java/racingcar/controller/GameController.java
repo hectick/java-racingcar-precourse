@@ -6,6 +6,7 @@ import racingcar.view.InputView;
 import racingcar.view.OutputView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class GameController {
@@ -55,8 +56,21 @@ public class GameController {
 
     private List<String> checkWinner(){
         List<String> winners = new ArrayList<>();
-
+        int max = findBiggestPosition();
+        for(Car car : cars){
+            if(car.getPosition() == max){
+                winners.add(car.getName());
+            }
+        }
         return winners;
+    }
+
+    private int findBiggestPosition(){
+        List<Integer> positions = new ArrayList<Integer>();
+        for(Car car : cars){
+            positions.add(car.getPosition());
+        }
+        return Collections.max(positions);
     }
 
 }
