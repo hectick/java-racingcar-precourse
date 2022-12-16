@@ -8,7 +8,7 @@ public class OutputView {
         System.out.println(Message.GET_CAR_NAMES_MESSAGE);
     }
 
-    public static void pirntGetTryCountMessage(){
+    public static void printGetTryCountMessage(){
         System.out.println(Message.GET_TRY_COUNT_MESSAGE);
     }
 }
