@@ -1,5 +1,6 @@
 package racingcar.view;
 import camp.nextstep.edu.missionutils.Console;
+import racingcar.validator.InputValidator;
 
 public class InputView {
     public static final String SPLIT_REGEX = "\\s*,\\s*";
@@ -7,6 +8,7 @@ public class InputView {
     public static String[] readCarNames(){
         String input = Console.readLine();
         String[] carNames = parse(input);
+        InputValidator.validateCarNamesLength(carNames);
         return carNames;
     }
 
