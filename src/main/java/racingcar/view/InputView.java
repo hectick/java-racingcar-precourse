@@ -10,7 +10,14 @@ public class InputView {
         return carNames;
     }
 
-    private static String[] parse(String input){
-        return input.split(",");
+    public static int readTryCount(){
+        String input = Console.readLine();
+        return Integer.parseInt(input);
     }
+
+    private static String[] parse(String input){
+        return input.split(REGEX);
+    }
+
+
 }
