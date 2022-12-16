@@ -14,6 +14,7 @@ public class InputView {
 
     public static int readTryCount(){
         String input = Console.readLine();
+        InputValidator.validateTryCount(input);
         return Integer.parseInt(input);
     }
 
