@@ -32,7 +32,7 @@ public class OutputView {
 
     public static void printWinner(List<String> carNames){
         System.out.println();
-        String output = "최종우승자 : ";
+        String output = "최종 우승자 : ";
         for(String carName : carNames){
             output += carName;
             output += ", ";
