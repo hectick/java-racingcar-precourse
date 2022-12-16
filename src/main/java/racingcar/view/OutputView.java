@@ -7,7 +7,7 @@ import java.util.List;
 
 public class OutputView {
 
-    private static final String REMOVE_REGEX = ",$";
+    private static final String REMOVE_REGEX = ",\\s$";
 
     public static void printGetCarNamesMessage(){
         System.out.println();
@@ -36,7 +36,7 @@ public class OutputView {
             output += carName;
             output += ", ";
         }
-        output.replaceAll(REMOVE_REGEX, "");
+        output = output.replaceAll(REMOVE_REGEX, "");
         System.out.println(output);
     }
 }
