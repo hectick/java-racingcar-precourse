@@ -31,6 +31,7 @@ public class OutputView {
     }
 
     public static void printWinner(List<String> carNames){
+        System.out.println();
         String output = "최종우승자 : ";
         for(String carName : carNames){
             output += carName;
@@ -38,5 +39,10 @@ public class OutputView {
         }
         output = output.replaceAll(REMOVE_REGEX, "");
         System.out.println(output);
+    }
+
+    public static void printError(String error){
+        System.out.println();
+        System.out.println(error);
     }
 }

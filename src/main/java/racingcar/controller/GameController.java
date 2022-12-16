@@ -33,17 +33,25 @@ public class GameController {
     }
 
     private void setCars(){
-        OutputView.printGetCarNamesMessage();
-        String[] carNames = InputView.readCarNames();
-        for(int i = 0; i < carNames.length; i++){
-            Car car = new Car(carNames[i]);
-            cars.add(car);
+        try{
+            OutputView.printGetCarNamesMessage();
+            String[] carNames = InputView.readCarNames();
+            for(int i = 0; i < carNames.length; i++){
+                Car car = new Car(carNames[i]);
+                cars.add(car);
+            }
+        }catch(IllegalArgumentException e){
+            OutputView.printError(e.getMessage());
         }
     }
 
     private void setTryCount(){
-        OutputView.printGetTryCountMessage();
-        tryCount = InputView.readTryCount();
+        try{
+            OutputView.printGetTryCountMessage();
+            tryCount = InputView.readTryCount();
+        }catch(IllegalArgumentException e){
+            OutputView.printError(e.getMessage());
+        }
     }
 
     private void playRound(){
